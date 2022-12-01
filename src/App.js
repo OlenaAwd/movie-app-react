@@ -1,5 +1,7 @@
 import { Container } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ReactGA from "react-ga4";
+import TagManager from "react-gtm-module";
 import "./App.css";
 import Header from "./components/Header/Header";
 import SimpleBottomNavigation from "./components/MainNav";
@@ -7,8 +9,14 @@ import Trending from "./pages/Trending/Trending";
 import Movies from "./pages/Movies/Movies";
 import Series from "./pages/Series/Series";
 import Search from "./pages/Search/Search";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    ReactGA.initialize("GTM-K2B7XC8");
+    TagManager.initialize({ gtmId: "GTM-K2B7XC8" });
+  }, []);
+
   return (
     <BrowserRouter>
       <Header />
