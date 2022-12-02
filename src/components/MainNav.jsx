@@ -7,7 +7,6 @@ import TVIcon from "@mui/icons-material/Tv";
 import WhatshotIcon from "@mui/icons-material/Whatshot";
 import SearchIcon from "@mui/icons-material/Search";
 import { useNavigate } from "react-router-dom";
-import { trendingStyle } from "../constants/styles/trendingStyle";
 
 const useStyles = makeStyles({
   root: {
@@ -55,8 +54,7 @@ export default function SimpleBottomNavigation() {
       }}
     >
       <BottomNavigationAction
-        sx={trendingStyle}
-        // style={{ color: "white" }}
+        style={{ color: "white" }}
         label="Trending"
         icon={<WhatshotIcon />}
       />
