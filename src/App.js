@@ -13,8 +13,8 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    ReactGA.initialize("GTM-K2B7XC8");
-    TagManager.initialize({ gtmId: "GTM-K2B7XC8" });
+    ReactGA.initialize("GTM-KGLQ4R8");
+    TagManager.initialize({ gtmId: "GTM-KGLQ4R8" });
   }, []);
 
   return (
